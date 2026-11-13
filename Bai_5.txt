@@ -1,0 +1,18 @@
+Phần 1: Phân tích 2 vi phạm nghiêm trọng về AI Policy & Đạo đức nghề nghiệpHành động sao chép dữ liệu nhân sự lên AI công cộng và dùng kết quả đó để sa thải nhân viên ngay lập tức vi phạm nghiêm trọng các nguyên tắc cốt lõi về quản trị dữ liệu, đạo đức AI và pháp luật lao động:1. Vi phạm bảo mật dữ liệu & Quyền riêng tư (Data Privacy & Security Breach)Hành vi sai phạm: Dán trực tiếp dữ liệu định danh cá nhân (PII), bảng lương/KPI và lịch sử chấm công của 50 nhân viên lên công cụ AI bên ngoài mà không ẩn danh hóa (anonymization) hay có sự phê duyệt bảo mật.Hệ lụy: Dữ liệu nội bộ nhạy cảm của MartX có nguy cơ bị rò rỉ, bị lưu trữ trên máy chủ bên thứ ba hoặc dùng để huấn luyện lại mô hình công khai. Hành động này vi phạm trực tiếp Nghị định 13/2023/NĐ-CP về Bảo vệ dữ liệu cá nhân và các quy định bảo mật thông tin (NDA) của doanh nghiệp.2. Từ bỏ trách nhiệm giải trình & Phán quyết tự động hóa (Abandonment of Accountability & Automation Bias)Hành vi sai phạm: Phó mặc hoàn toàn quyết định sinh kế của người lao động cho thuật toán ("không can thiệp nên hoàn toàn công bằng") và dùng AI để ra quyết định kỷ luật/sa thải ngay lập tức mà không có bước con người kiểm duyệt (Human-in-the-loop).Hệ lụy đạo đức & pháp lý:Thiên kiến thuật toán (Algorithmic Bias) & Thiếu bối cảnh: AI chỉ nhìn thấy con số khô khan (ví dụ: đi muộn, KPI giảm) mà không hiểu bối cảnh thực tế (ví dụ: nhân viên nghỉ thai sản, ốm đau có giấy bác sĩ, gặp sự cố khách quan, hoặc đang đảm nhận dự án khó chưa đến kỳ nghiệm thu). Kết quả của AI dễ dẫn đến phân biệt đối xử bất công.Trái pháp luật lao động: Theo Bộ luật Lao động, quyết định đơn phương chấm dứt hợp đồng lao động phải dựa trên căn cứ pháp lý rõ ràng, quy trình đánh giá công khai, có sự tham gia của tổ chức đại diện người lao động và chịu trách nhiệm bởi chủ thể có thẩm quyền của công ty. AI không có tư cách pháp nhân để chịu trách nhiệm thay cho Trưởng phòng Nhân sự.Phần 2: Sơ đồ luồng 3 bước chuẩn an toàn cho MartXĐể AI phát huy vai trò Trợ lý hỗ trợ ra quyết định (Decision Support) mà vẫn đảm bảo an toàn pháp lý và nhân văn, MartX cần áp dụng quy trình 3 bước khép kín sau:Plaintext[BƯỚC 1: CHUẨN HÓA & BẢO MẬT DỮ LIỆU]
+   │  • Mã hóa/Ẩn danh thông tin cá nhân (Thay Tên/SĐT bằng Mã NV: NV01, NV02...)
+   │  • Chỉ sử dụng công cụ AI doanh nghiệp (Enterprise AI) được MartX cấp phép
+   ▼
+[BƯỚC 2: AI PHÂN TÍCH & ĐỀ XUẤT (DECISION SUPPORT)]
+   │  • Prompt chuẩn: Yêu cầu AI phát hiện xu hướng bất thường, nhóm nhân sự 
+   │    cần hỗ trợ/đào tạo (KHÔNG yêu cầu AI ra lệnh sa thải)
+   │  • Đầu ra: Danh sách cảnh báo hiệu suất kèm chỉ số phân tích tham khảo
+   ▼
+[BƯỚC 3: HUMAN-IN-THE-LOOP (CON NGƯỜI THẨM ĐỊNH & QUYẾT ĐỊNH)]
+   │  • Đối chiếu chéo: HR + Quản lý trực tiếp kiểm tra bối cảnh thực tế 
+   │    (ốm đau, thai sản, biến động dự án, yếu tố khách quan)
+   │  • Trao đổi 1-1: Họp phản hồi, lập kế hoạch cải thiện hiệu suất (PIP)
+   │  • Phê duyệt cuối cùng: Hội đồng Nhân sự & Ban Giám đốc ký quyết định 
+   │    dựa trên hồ sơ pháp lý đầy đủ và quy định của Bộ luật Lao động
+   ▼
+[KẾT THÚC: LƯU TRỮ HỒ SƠ & CHỊU TRÁCH NHIỆM GIẢI TRÌNH]
+Bảng phân định trách nhiệm (RACI rút gọn) trong quy trình mớiGiai đoạnVai trò của AIVai trò của Con người (HR & Quản lý)1. Đầu vàoTiếp nhận dữ liệu đã làm sạch và ẩn danh.Chịu trách nhiệm lọc dữ liệu, ẩn danh PII và kiểm tra tính chính xác của số liệu gốc.2. Xử lýTổng hợp số liệu, tìm điểm bất thường, gợi ý nguyên nhân từ dữ liệu.Thiết lập tiêu chí đánh giá công bằng, đặt câu lệnh (Prompt) không định kiến.3. Đầu raXuất báo cáo tham khảo các trường hợp có chỉ số KPI/chuyên cần thấp.Thẩm định độc lập, xác minh bối cảnh đời sống/công việc, phỏng vấn 1-1 và ra quyết định cuối cùng.
